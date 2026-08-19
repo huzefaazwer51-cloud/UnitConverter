@@ -1,43 +1,51 @@
-using System;
+﻿using System;
 
 class UnitConverter
 {
+    // This is where the program starts running
     static void Main()
     {
-        bool running = true;
+        bool keepRunning = true; // we'll use this to control the loop
 
-        while (running)
+        // This loop keeps showing the menu until the user chooses to exit
+        while (keepRunning)
         {
+            // Show the menu
             Console.WriteLine("\n=== Unit Converter ===");
             Console.WriteLine("1. Temperature");
             Console.WriteLine("2. Distance");
             Console.WriteLine("3. Currency");
             Console.WriteLine("4. Exit");
             Console.Write("Choose an option: ");
-            string choice = Console.ReadLine();
 
-            switch (choice)
+            string choice = Console.ReadLine(); // read what the user typed
+
+            // Decide what to do based on their choice
+            if (choice == "1")
             {
-                case "1":
-                    TemperatureMenu();
-                    break;
-                case "2":
-                    DistanceMenu();
-                    break;
-                case "3":
-                    CurrencyMenu();
-                    break;
-                case "4":
-                    running = false;
-                    Console.WriteLine("Goodbye!");
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice, try again.");
-                    break;
+                TemperatureMenu();
+            }
+            else if (choice == "2")
+            {
+                DistanceMenu();
+            }
+            else if (choice == "3")
+            {
+                CurrencyMenu();
+            }
+            else if (choice == "4")
+            {
+                keepRunning = false; // this will stop the while loop
+                Console.WriteLine("Goodbye!");
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice, please try again.");
             }
         }
     }
 
+    // Handles temperature conversions
     static void TemperatureMenu()
     {
         Console.WriteLine("1. Celsius to Fahrenheit");
@@ -46,21 +54,39 @@ class UnitConverter
         string option = Console.ReadLine();
 
         Console.Write("Enter value: ");
-        double value = double.Parse(Console.ReadLine());
+        double value = double.Parse(Console.ReadLine()); // convert text input into a number
 
-        double result = option switch
+        double result = 0; // we'll store the answer here
+
+        if (option == "1")
         {
-            "1" => CelsiusToFahrenheit(value),
-            "2" => FahrenheitToCelsius(value),
-            _ => throw new Exception("Invalid option")
-        };
+            result = CelsiusToFahrenheit(value);
+        }
+        else if (option == "2")
+        {
+            result = FahrenheitToCelsius(value);
+        }
+        else
+        {
+            Console.WriteLine("Invalid option.");
+            return; // exit this method early, nothing more to do
+        }
 
-        Console.WriteLine($"Result: {result}");
+        Console.WriteLine("Result: " + result);
     }
 
-    static double CelsiusToFahrenheit(double c) => (c * 9 / 5) + 32;
-    static double FahrenheitToCelsius(double f) => (f - 32) * 5 / 9;
+    // Small helper methods that do just one calculation each
+    static double CelsiusToFahrenheit(double celsius)
+    {
+        return (celsius * 9 / 5) + 32;
+    }
 
+    static double FahrenheitToCelsius(double fahrenheit)
+    {
+        return (fahrenheit - 32) * 5 / 9;
+    }
+
+    // Handles distance conversions
     static void DistanceMenu()
     {
         Console.WriteLine("1. Km to Miles");
@@ -71,16 +97,26 @@ class UnitConverter
         Console.Write("Enter value: ");
         double value = double.Parse(Console.ReadLine());
 
-        double result = option switch
-        {
-            "1" => value * 0.621371,
-            "2" => value / 0.621371,
-            _ => throw new Exception("Invalid option")
-        };
+        double result = 0;
 
-        Console.WriteLine($"Result: {result}");
+        if (option == "1")
+        {
+            result = value * 0.621371; // km to miles
+        }
+        else if (option == "2")
+        {
+            result = value / 0.621371; // miles to km
+        }
+        else
+        {
+            Console.WriteLine("Invalid option.");
+            return;
+        }
+
+        Console.WriteLine("Result: " + result);
     }
 
+    // Handles currency conversions
     static void CurrencyMenu()
     {
         Console.WriteLine("1. USD to PKR");
@@ -91,33 +127,24 @@ class UnitConverter
         Console.Write("Enter value: ");
         double value = double.Parse(Console.ReadLine());
 
-        // fixed rate for simplicity — you can hardcode a rate you look up
-        double rate = 278.0;
+        double exchangeRate = 278.0; // fixed rate for now, just for practice
 
-        double result = option switch
+        double result = 0;
+
+        if (option == "1")
         {
-            "1" => value * rate,
-            "2" => value / rate,
-            _ => throw new Exception("Invalid option")
-        };
+            result = value * exchangeRate; // USD to PKR
+        }
+        else if (option == "2")
+        {
+            result = value / exchangeRate; // PKR to USD
+        }
+        else
+        {
+            Console.WriteLine("Invalid option.");
+            return;
+        }
 
-        Console.WriteLine($"Result: {result}");
+        Console.WriteLine("Result: " + result);
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -1,0 +1,15 @@
+D:\prep\dot net conssole\bin\Debug\net10.0\dot net conssole.exe
+D:\prep\dot net conssole\bin\Debug\net10.0\dot net conssole.deps.json
+D:\prep\dot net conssole\bin\Debug\net10.0\dot net conssole.runtimeconfig.json
+D:\prep\dot net conssole\bin\Debug\net10.0\dot net conssole.dll
+D:\prep\dot net conssole\bin\Debug\net10.0\dot net conssole.pdb
+D:\prep\dot net conssole\obj\Debug\net10.0\dot net conssole.GeneratedMSBuildEditorConfig.editorconfig
+D:\prep\dot net conssole\obj\Debug\net10.0\dot net conssole.AssemblyInfoInputs.cache
+D:\prep\dot net conssole\obj\Debug\net10.0\dot net conssole.AssemblyInfo.cs
+D:\prep\dot net conssole\obj\Debug\net10.0\dot net conssole.csproj.CoreCompileInputs.cache
+D:\prep\dot net conssole\obj\Debug\net10.0\dot net conssole.sourcelink.json
+D:\prep\dot net conssole\obj\Debug\net10.0\dot net conssole.dll
+D:\prep\dot net conssole\obj\Debug\net10.0\refint\dot net conssole.dll
+D:\prep\dot net conssole\obj\Debug\net10.0\dot net conssole.pdb
+D:\prep\dot net conssole\obj\Debug\net10.0\dot net conssole.genruntimeconfig.cache
+D:\prep\dot net conssole\obj\Debug\net10.0\ref\dot net conssole.dll
