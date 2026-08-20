@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dot net conssole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aeab1ff18dfc72b4cb46d90c15301fa0bc42f2bc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8811736a4feae6600ce14a7ef4bde028a6457e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("dot net conssole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dot net conssole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
